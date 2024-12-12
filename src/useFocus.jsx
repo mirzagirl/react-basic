@@ -8,8 +8,8 @@ export default function useFocus() {
     const element = ref.current;
 
     if (element) {
-      const handleFocus = () => setIsFocused(true);
-      const handleBlur = () => setIsFocused(false);
+      const handleFocus = (e) => {console.log("e   = ",e.target,"element",element);setIsFocused(true);}
+      const handleBlur = (e) => {console.log("e   = ",e.target,element);setIsFocused(false);}
 
       element.addEventListener("focus", handleFocus);
       element.addEventListener("blur", handleBlur);
@@ -20,7 +20,7 @@ export default function useFocus() {
         element.removeEventListener("blur", handleBlur);
       };
     }
-  }, []); // Empty dependency array ensures the effect runs once
+  }); // Empty dependency array ensures the effect runs once
 
   return [ref, isFocused];
 }
