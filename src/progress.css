@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+}
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #ddd;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #4caf50;
+  color: white;
+  text-align: center; /* Center the percentage text */
+  line-height: 20px; /* Vertically center the text in the bar */
+  transition: width 2s ease-in-out;
+}
