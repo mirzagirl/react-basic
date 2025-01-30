@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React,{ useState, useEffect, useRef }  from "react";
 
 export default function useOnClickOutside(callback) {
   const ref = useRef(null)
